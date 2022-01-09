@@ -1,0 +1,66 @@
+
+
+    <!-- MENU NAV -->
+        <app-nav-app (salir)="salirPadre()">
+            
+        </app-nav-app>
+    <!-- /.MENU-NAV -->
+
+
+    <!-- CONTENT NAV -->
+        <div id="layoutSidenav">
+            
+            <!-- Control Sidebar -->
+                <div id="layoutSidenav_nav">
+                    <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                        <div class="sb-sidenav-menu">
+                            
+                            <app-nav-side>
+                            </app-nav-side>
+
+                        </div>
+
+                        <div class="sb-sidenav-footer">
+                            <div class="small">Logged in as:</div>
+                            Start Bootstrap
+                            
+                            <li><a class="dropdown-item" href="#!" (click)="salirPadre()">Cerrar sesion</a></li>
+                        </div>
+
+                    </nav>
+                </div>
+
+            <!-- Button trigger modal -->
+
+                
+
+            <!-- /.control-sidebar -->
+
+            <div id="layoutSidenav_content">
+                
+                <main>
+                    
+                    <router-outlet>
+        
+                    </router-outlet>
+                    
+                </main>
+
+
+
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2021</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+
+        </div>
+    <!-- /.CONTENT-NAV -->
