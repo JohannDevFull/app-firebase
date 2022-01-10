@@ -80,7 +80,7 @@ export class AppComponent {
 
     this.cookieService.delete('token_access');
 
-    alert(this.authService.authApiJohann());
+    // alert(this.authService.authApiJohann());
 
     this.isLoggedIn=false;
     

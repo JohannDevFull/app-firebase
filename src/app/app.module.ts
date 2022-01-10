@@ -20,6 +20,11 @@ import { NavSideComponent } from './layout/layout-app/nav-side/nav-side.componen
 import { NavAppComponent } from './layout/layout-app/nav-app/nav-app.component';
 
 
+import { NgxPermissionsModule } from 'ngx-permissions';
+import { APP_INITIALIZER } from '@angular/core';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,9 +40,15 @@ import { NavAppComponent } from './layout/layout-app/nav-app/nav-app.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPermissionsModule.forRoot(),
   ],
-  providers: [CookieService],
+  providers: [
+    
+    CookieService,
+
+  ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

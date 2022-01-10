@@ -9,6 +9,8 @@ import { CookieService }        from 'ngx-cookie-service';
 import { Router } from '@angular/router';
 import { FormControl } from '@angular/forms';
 
+import { Modal } from 'bootstrap';
+
 
 @Component({
   selector: 'app-login',
@@ -45,7 +47,7 @@ export class LoginComponent implements OnInit {
     }
 
     if(this.isLoggedIn){
-      window.location.href = "app";
+      window.location.href = "app/dashboard";
     }
 
   } 
@@ -71,23 +73,36 @@ export class LoginComponent implements OnInit {
         this.isLoggedIn = true;
         this.roles = this.tokenStorage.getUser().roles;
 
+        let element: HTMLElement = document.getElementById('click') as HTMLElement;
+
+        console.log("!!!!")
+        console.log(element)
+        console.log("!!!!")
+        element.click();
+
+
         setTimeout(()=>{
           
-          this.router.navigate(['/app'])
+          this.router.navigate(['/app/dashboard'])
 
-        },222);
+        },300);
 
         setTimeout(()=>{
           
           location.reload();
 
-        },333);
+        },1000);
 
 
       },
       err => {
 
         alert("Error auth")
+
+        console.log("Erroooooooooooooooooor")
+        console.log(err)
+        console.log("Erroooooooooooooooooor")
+
         this.errorMessage = err.error.message;
         this.isLoginFailed = true;
       }
@@ -99,5 +114,8 @@ export class LoginComponent implements OnInit {
     window.location.reload();
   }
 
+  okLogin(){
+    alert("YEs");
+  }
 
 }

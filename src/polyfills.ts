@@ -51,3 +51,17 @@ import 'zone.js';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+
+// declare var bs: any;
+
+// import * as bs from './assets/bootstrap-5.0.2-dist/js/bootstrap.js';
+
+// declare global {
+    
+//     interface Window {
+//         bootstrap: any;
+//     }
+    
+// }
+
+// window.bootstrap = bs;

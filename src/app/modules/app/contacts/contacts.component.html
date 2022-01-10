@@ -28,7 +28,7 @@
 
 	  	<div class="card-body">
 
-	  		<table class="table">
+	  		<table class="table" *ngxPermissionsOnly="['ADMIN', 'GUEST']">
 				<thead class="table-dark">
 					<tr>
 				      <th scope="col">#</th>
