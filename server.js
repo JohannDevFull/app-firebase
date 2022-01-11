@@ -5,7 +5,7 @@ const path = require('path');
 const app = express();
 
 // Serve only the static files form the dist directory
-app.use(express.static('./dist/angular-myagenda'));
+app.use(express.static('./dist/angular-myagenda/'));
 
 app.get('/*', (req, res) =>
     res.sendFile('index.html', {root: 'dist/angular-myagenda/'}),
